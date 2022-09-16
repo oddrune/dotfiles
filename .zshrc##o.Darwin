@@ -1,0 +1,25 @@
+#
+# Executes commands at the start of an interactive session.
+#
+# Authors:
+#   Sorin Ionescu <sorin.ionescu@gmail.com>
+#
+
+# Source Prezto.
+if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
+  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
+fi
+
+# Customize to your needs...
+#zstyle ':completion:*' accept-exact true
+unsetopt correct
+unsetopt correctall
+DISABLE_CORRECTION="true"
+
+export PATH=$HOME/bin:$HOME/Library/Python/3.8/bin:$PATH:/usr/local/Cellar/libnfc/1.8.0/bin
+#source /usr/local/opt/chruby/share/chruby/chruby.sh
+#source /usr/local/opt/chruby/share/chruby/chruby.sh
+#source /usr/local/opt/chruby/share/chruby/auto.sh
+#chruby ruby-3.1.1
+alias kill_md="launchctl unload /Library/LaunchAgents/com.microsoft.wdav.tray.plist"
+
